@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Diseño copy.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main id="favoritos-container" class="container">
+        <!-- Aquí se mostrarán los menús agregados -->
+    </main>
+    
+    <script>
+    // Recuperar el contenido guardado en el almacenamiento local
+    const menuFavorito = localStorage.getItem("menuFavorito");
+
+    if (menuFavorito) {
+        // Insertar el contenido en el contenedor de favoritos
+        document.getElementById("favoritos-container").innerHTML = menuFavorito;
+    } else {
+        document.getElementById("favoritos-container").innerHTML = "<p>No has agregado ningún menú a favoritos.</p>";
+    }
+    </script>
+</body>
+</html>
