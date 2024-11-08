@@ -1,18 +1,32 @@
-const BotonAgregar = document.getElementById("Botonan");
-const input_tareas = document.getElementById("inputtar");
-const li_tareas = document.getElementById("Lista-tareas")
+document.addEventListener("DOMContentLoaded", () => {
+    const botonAgregar = document.getElementById("Botonan");
+    const inputTareas = document.getElementById("inputtar");
+    const listaTareas = document.getElementById("Lista-tareas");
+    const tareasBorradas = document.getElementById("Tareas-borradas");
 
-BotonAgregar.addEventListener("click", () =>{
-    const valorinput = input_tareas.value;
+    botonAgregar.addEventListener("click", () => {
+        const valorInput = inputTareas.value.trim();
 
-    const li_activity = document.createElement("li");
-    const text_tareas = document.createTextNode(valorinput);
-    li_activity.appendChild(text_tareas);
-    li_tareas.appendChild(li_activity);
-    const boton_borrar = document.createElement("button");
-    boton_borrar.textContent = "Borrar";
-    li_activity.appendChild(boton_borrar);
-    boton_borrar.addEventListener("click", () =>{
-        li_activity.remove();
+        if (valorInput === "") return;
+
+        const liActivity = document.createElement("li");
+        const textTareas = document.createTextNode(valorInput);
+        liActivity.appendChild(textTareas);
+
+        const botonBorrar = document.createElement("button");
+        botonBorrar.textContent = "Borrar";
+        botonBorrar.classList.add("btn-borrar");
+
+        liActivity.appendChild(botonBorrar);
+        listaTareas.appendChild(liActivity);
+
+        botonBorrar.addEventListener("click", () => {
+            liActivity.remove();
+            const tareaBorrada = document.createElement("li");
+            tareaBorrada.textContent = valorInput;
+            tareasBorradas.appendChild(tareaBorrada);
+        });
+
+        inputTareas.value = "";
     });
 });

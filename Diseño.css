@@ -12,6 +12,17 @@ body {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.Añadir{
+    border-radius: 50px;
+    background-color: #3B3030;
+    color: #fff;
+}
+
+.input-tareas{
+    border-radius: 50px;
+    color: #444;
+}
+
 .logo {
     font-size: 30px;
     color: #795757;
@@ -90,4 +101,12 @@ p {
 
 .boton1:hover {
     background-color:#664343;
+}
+
+.btn-borrar {
+    background-color: red;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
 }
