@@ -104,8 +104,8 @@ p {
 }
 
 .btn-borrar {
-    background-color: red;
-    border: none;
+    background-color:chartreuse;
+    border-radius: 40px;
     padding: 5px 10px;
     margin-left: 10px;
     cursor: pointer;

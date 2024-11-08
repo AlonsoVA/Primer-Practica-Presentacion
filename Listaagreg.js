@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         liActivity.appendChild(textTareas);
 
         const botonBorrar = document.createElement("button");
-        botonBorrar.textContent = "Borrar";
+        botonBorrar.textContent = "Completado";
         botonBorrar.classList.add("btn-borrar");
 
         liActivity.appendChild(botonBorrar);
